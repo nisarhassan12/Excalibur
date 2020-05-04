@@ -97,7 +97,11 @@ module.exports = (config) => {
       Chrome_with_debug: {
         base: 'Chrome',
         flags: ['--remote-debugging-port=9334', '--no-sandbox']
-      }
+      },
+      Chrome_Without_Sandbox: {
+        base: 'Chrome',
+        flags: ['--no-sandbox', '--disable-setuid-sandbox'],
+      },
     }
   });
 };
